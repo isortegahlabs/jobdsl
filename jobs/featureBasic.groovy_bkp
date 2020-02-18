@@ -1,11 +1,11 @@
-project_name = "jenkins-pipeline-python"
-repo = "https://github.com/videocursoscloud/test-jenkins-1.git"
+project_name = "feature-basic"
+repo = "git@github.com:isortegahlabs/jenkinsfiles_project.git"
 repo_name = "repo"
 
 pipelineJob(project_name) {
     definition {
         triggers {
-            scm('H/1 * * * *')
+            scm('* * * * *')
         }
 
         cpsScm {
