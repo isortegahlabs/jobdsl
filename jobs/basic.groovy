@@ -13,7 +13,7 @@ branches.each {
             cron('H/2 * * * *')
         }
         triggers {
-            scm('H/1 * * * *')
+            scm('H/2 * * * *')
         }
         scm {
             git("git://github.com/${project}.git", branchName)
