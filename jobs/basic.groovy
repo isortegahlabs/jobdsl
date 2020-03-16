@@ -9,6 +9,12 @@ branches.each {
     def branchName = it.name
     def jobName = "project/"+"${project}-${branchName}".replaceAll('/','-')
     job(jobName) {
+        triggers {
+            cron('H/2 * * * *')
+        }
+        triggers {
+            scm('H/1 * * * *')
+        }
         scm {
             git("git://github.com/${project}.git", branchName)
         }
