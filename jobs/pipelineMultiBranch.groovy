@@ -25,7 +25,7 @@ multibranchPipelineJob("${folderName}/baseProject"){
   branchSources {
     git {
       id('shared') 
-      remote('https://github.com/isortegahlabs/jenkinsfiles_project')
+      remote("https://github.com/${project}")
       //credentialsId('github-ci')
       includes('feature/sha*')
     }
