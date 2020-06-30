@@ -4,7 +4,7 @@ def branchesRepo = new groovy.json.JsonSlurper().parse(branchApi.newReader())
 
 def folderName = "pipeLineSimple"
 folder(folderName){
-  description('Folder for project A')
+  description('Folder for project Pipeline simple')
 }
 
 print branchesRepo
