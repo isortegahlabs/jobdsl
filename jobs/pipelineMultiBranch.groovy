@@ -27,7 +27,7 @@ multibranchPipelineJob("${folderName}/baseProject"){
       id('shared') 
       remote("https://github.com/${project}")
       //credentialsId('github-ci')
-      includes('feature/sha*')
+      includes("feature/sha* feature/sharedLibraries_*")
     }
     /*git {
       id('shareds') 
