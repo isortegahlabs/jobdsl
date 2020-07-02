@@ -7,9 +7,14 @@ folder(folderName){
   description('Folder for project Pipeline simple')
 }
 
-print branchesRepo
+print "Branches"
+branchesRepo.removeAll{
+  it.name.contains("shared")
+}
+
 branchesRepo.each{
 	def branchName = it.name
+
 	def jobName = "${folderName}/"+"${project}-${branchName}".replaceAll('/','-')
     pipelineJob(jobName) {
 
