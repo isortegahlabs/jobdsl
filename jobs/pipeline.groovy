@@ -7,7 +7,7 @@ folder(folderName){
   description('Folder for project Pipeline simple')
 }
 
-print "Branches"
+print "Branches:"
 branchesRepo.removeAll{
   it.name.contains("shared")
 }

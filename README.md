@@ -4,3 +4,5 @@
 
 - Instalar plugin "Job DSL"
 
+![](imgs/pluginJobdsl.gif)
+
