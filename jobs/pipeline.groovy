@@ -7,6 +7,13 @@ folder(folderName){
   description('Folder for project Pipeline simple')
 }
 
+branchesRepo.removeAll{
+  it.name.contains("shared")
+}
+
+branchesRepo.removeAll{
+  it.name.contains("master") 
+}
 
 branchesRepo.each{
 	def branchName = it.name
