@@ -27,7 +27,7 @@ multibranchPipelineJob("${folderName}/base"){
       id('master') 
       remote("https://github.com/${project}")
       credentialsId('isortegah')
-      includes("*")
+      includes("master")
     }
   }
 
