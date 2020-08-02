@@ -4,7 +4,7 @@ def folderName = "Nightcrawler"
 folder(folderName){
   description('Proyecto Nightcrawler')
 }
-multibranchPipelineJob("${folderName}/baseProject"){
+multibranchPipelineJob("${folderName}"){
   
   displayName("Nightcrawler Project")
   description("Proyecto Nightcrawler")
@@ -24,7 +24,7 @@ multibranchPipelineJob("${folderName}/baseProject"){
 
   branchSources {
     git {
-      id('shared') 
+      id('master') 
       remote("https://github.com/${project}")
       credentialsId('isortegah')
       includes("*")
