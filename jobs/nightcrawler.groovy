@@ -4,7 +4,7 @@ def folderName = "Nightcrawler"
 folder(folderName){
   description('Proyecto Nightcrawler')
 }
-multibranchPipelineJob("${folderName}"){
+multibranchPipelineJob("${folderName}/base"){
   
   displayName("Nightcrawler Project")
   description("Proyecto Nightcrawler")
