@@ -1,4 +1,4 @@
-def project = 'isortegahlabs/archetype-automation-project'
+def project = 'isortegah/archetype-automation-project'
 
 def folderName = "Archetype"
 folder(folderName){
