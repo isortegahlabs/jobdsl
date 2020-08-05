@@ -1,13 +1,13 @@
-def project = 'isortegah/nightcrawler'
+def project = 'isortegahlabs/archetype-automation-project'
 
-def folderName = "Nightcrawler"
+def folderName = "Archetype"
 folder(folderName){
-  description('Proyecto Nightcrawler')
+  description('Proyecto Archetype')
 }
 multibranchPipelineJob("${folderName}/base"){
   
-  displayName("Nightcrawler Project")
-  description("Proyecto Nightcrawler")
+  displayName("Archetype Project")
+  description("Proyecto Archetype")
   
   factory {
     workflowBranchProjectFactory {
@@ -30,9 +30,10 @@ multibranchPipelineJob("${folderName}/base"){
       includes("*")
     }
   }
-
-  /*triggers {
+/*
+  triggers {
     cron('H/5 * * * *')
   }*/
+
 }
 
