@@ -1,9 +1,15 @@
+def folderBase = "POCs"
 def folderName = "pocScalaAndJava"
-folder(folderName){
+
+folder(folderBase){
+  description('Folder for projects POCs')
+}
+
+folder("${folderBase}/${folderName}"){
   description('Folder for project Scala And Java')
 }
 
-def jobName = "${folderName}/poc_Scala_And_Java"
+def jobName = "${folderBase}/${folderName}/poc_Scala_And_Java"
 
 pipelineJob(jobName) {
     definition {
